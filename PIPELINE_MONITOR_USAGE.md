@@ -23,13 +23,13 @@ This tool helps you quickly identify and troubleshoot Azure DevOps pipelines tha
 
 ```bash
 # Your Azure DevOps organization (from the URL: https://dev.azure.com/YOUR_ORG)
-export AZURE_DEVOPS_ORG="your-organization-name"
+export AZURE_DEVOPS_ORG="keerthisha6"
 
 # Your project name
-export AZURE_DEVOPS_PROJECT="your-project-name"
+export AZURE_DEVOPS_PROJECT="Terraform Code"
 
 # Your Personal Access Token (see setup instructions below)
-export AZURE_DEVOPS_PAT="your-pat-token"
+export AZURE_DEVOPS_PAT="BVmWuKRs0Jv3My6ni1i2ye7jqC2vH7QEE9vruXuEsbjN3DZ5oKFBJQQJ99BGACAAAAAAAAAAAAASAZDOkLhv"
 ```
 
 ### 2. Run the Monitor

@@ -1,0 +1,39 @@
+# Azure Pipeline Monitor - Cron Job Examples
+# Copy the appropriate line to your crontab (crontab -e)
+
+# IMPORTANT: Replace /path/to/azure-pipeline-monitor with the actual path to this directory
+
+# Every hour during business hours (9 AM to 6 PM, Monday to Friday)
+0 9-18 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Every 30 minutes during business hours (9 AM to 6 PM, Monday to Friday) 
+*/30 9-18 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Every 15 minutes during business hours (9 AM to 6 PM, Monday to Friday)
+*/15 9-18 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Daily at 9 AM (Monday to Friday)
+0 9 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Twice daily - 9 AM and 2 PM (Monday to Friday)
+0 9,14 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Every 2 hours during extended hours (8 AM to 8 PM, Monday to Friday)
+0 8-20/2 * * 1-5 cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# Every hour, 24/7 (for critical environments)
+0 * * * * cd /path/to/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# How to set up:
+# 1. Choose one of the lines above
+# 2. Replace "/path/to/azure-pipeline-monitor" with the actual path
+# 3. Run: crontab -e
+# 4. Add the line to your crontab
+# 5. Save and exit
+
+# Example with actual path:
+# 0 9-18 * * 1-5 cd /home/devops/azure-pipeline-monitor && source venv/bin/activate && python azure_pipeline_monitor.py
+
+# To view your current cron jobs: crontab -l
+# To remove all cron jobs: crontab -r
+# To edit cron jobs: crontab -e

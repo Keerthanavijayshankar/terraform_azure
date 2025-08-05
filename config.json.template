@@ -1,0 +1,47 @@
+{
+  "_comment": "Azure Pipeline Monitor Configuration Template",
+  "_instructions": "Copy this file to 'config.json' and fill in your actual values",
+  
+  "azure_devops_org": "your-organization-name",
+  "azure_devops_project": "your-project-name", 
+  "azure_devops_pat": "your-personal-access-token",
+  
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "email_user": "your-email@gmail.com",
+  "email_password": "your-app-password",
+  "recipient_emails": [
+    "admin@company.com",
+    "devops-team@company.com"
+  ],
+  
+  "send_success_report": false,
+  
+  "_email_providers": {
+    "gmail": {
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "note": "Use App Password instead of regular password"
+    },
+    "outlook": {
+      "smtp_server": "smtp-mail.outlook.com", 
+      "smtp_port": 587,
+      "note": "Use your regular Outlook password"
+    },
+    "office365": {
+      "smtp_server": "smtp.office365.com",
+      "smtp_port": 587,
+      "note": "Use your Office 365 credentials"
+    }
+  },
+  
+  "_azure_devops_setup": {
+    "pat_creation": "Go to Azure DevOps > User Settings > Personal Access Tokens",
+    "required_scopes": [
+      "Build (read)",
+      "Release (read)", 
+      "Pipeline (read)"
+    ],
+    "pat_expiry": "Set expiry date according to your security policy"
+  }
+}
